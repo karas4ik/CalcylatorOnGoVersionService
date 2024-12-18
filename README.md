@@ -9,31 +9,31 @@ This project is a simple web service calculator that supports basic operations s
 ${\textsf{\color{orange}🟧 How Does It Work?}}$
 
 ```
-  HTTP запрос к серверу
-           |
-           v
-  +-------------------+
-  |   Обработчик      |
-  |   (handler)       |
-  +-------------------+
-           |
-           v
-  +-------------------+
-  |   Сервис          |
-  |   (service)       |
-  +-------------------+
-           |
-           v
-  +-------------------+
-  |   Кэширование     |
-  |   (cache)         |
-  +-------------------+
-           |
-           v
-  +-------------------+
-  |   Модели          |
-  |   (model)         |
-  +-------------------+
+HTTP request to the server
+       |
+       v
++-------------------+
+|    Handler        |
+|    (handler)      |
++-------------------+
+       |
+       v
++-------------------+
+|   Service         |
+|   (service)       |
++-------------------+
+       |
+       v
++-------------------+
+|   Caching         |
+|   (cache)         |
++-------------------+
+       |
+       v
++-------------------+
+|   Models          |
+|   (model)         |
++-------------------+
 ```
 
 ### Component Descriptions:
@@ -64,51 +64,49 @@ The arithmetic expression handler takes the input expression in JSON format and 
 
 ---
 
-${\textsf{\color{green}🟩 Примеры запросов}}$
+${\textsf{\color{green}🟩 Example Requests}}$
 
-| Тип запроса              | Пример запроса         | Результат                              |
-|-------------------------|-----------------------|----------------------------------------|
-| ${\textsf{\color{lightgreen}Корректный}}$              | `"expression": "2 + 2"` | Вернёт `{"result": "4"}`              |
-| ${\textsf{\color{lightgreen}Корректный}}$              | `"expression": "10 - 5"` | Вернёт `{"result": "5"}`              |
-| ${\textsf{\color{orange}Некорректный}}$            | `"expression": "5 / 0"`  | Вернёт `{"error": "division by zero"}` |
-| ${\textsf{\color{orange}Некорректный}}$            | `"expression": "invalid"` | Вернёт `{"error": "invalid expression"}` |
-| ${\textsf{\color{darkred}Неправильный}}$            | `"expression": ""`     | Вернёт `{"error": "Invalid JSON format"}` |
-
----
-
-${\textsf{\color{blue}🟦 Статусы HTTP и возвращаемые значения}}$
-
-| Статус | Описание                                     |
-|--------|----------------------------------------------|
-| 200    | Успех, запрос обработан                     |
-| 400    | Ошибка запроса, некорректный JSON          |
-| 404    | Не найдено, если путь неправилен            |
-| 405    | Метод не разрешен для данного пути         |
-| 422    | Ошибка обработки, неверное выражение        |
-| 500    | Внутренняя ошибка сервера                   |
-
+| Request Type          | Example Request         | Result                                |
+|-----------------------|-------------------------|---------------------------------------|
+| ${\textsf{\color{lightgreen}Correct}}$              | `"expression": "2 + 2"` | Returns `{"result": "4"}`            |
+| ${\textsf{\color{lightgreen}Correct}}$              | `"expression": "10 - 5"` | Returns `{"result": "5"}`            |
+| ${\textsf{\color{orange}Incorrect}}$            | `"expression": "5 / 0"`  | Returns `{"error": "division by zero"}` |
+| ${\textsf{\color{orange}Incorrect}}$            | `"expression": "invalid"` | Returns `{"error": "invalid expression"}` |
+| ${\textsf{\color{darkred}Invalid}}$            | `"expression": ""`     | Returns `{"error": "Invalid JSON format"}` |
 
 ---
 
-${\textsf{\color{purple}🟣 Заключение: Как установить}}$
+${\textsf{\color{blue}🟦 HTTP Statuses and Returned Values}}$
 
-1. Клонируйте репозиторий:
+| Status | Description                                 |
+|--------|---------------------------------------------|
+| 200    | Success, request processed                  |
+| 400    | Request error, invalid JSON                 |
+| 404    | Not found, if the path is incorrect        |
+| 405    | Method not allowed for this path           |
+| 422    | Processing error, invalid expression        |
+| 500    | Internal server error                       |
+
+---
+
+${\textsf{\color{purple}🟣 Conclusion: How to Install}}$
+
+1. Clone the repository:
    
    ```bash
-   git clone https://github.com/yourusername/calc_s>ervice.git
+   git clone https://github.com/yourusername/calc_service.git
    cd calc_service
    ```
 
-2. Убедитесь, что у вас установлен Go
-(версия 1.18 и выше).
+2. Make sure you have Go installed (version 1.18 or higher).
 
-3. Установите зависимости:
+3. Install dependencies:
    
    ```bash
    go mod tidy
    ```
 
-4. Создайте файл конфигурации `config.json` в корне проекта:
+4. Create a configuration file `config.json` in the root of the project:
 
    ```json
    {
@@ -116,10 +114,10 @@ ${\textsf{\color{purple}🟣 Заключение: Как установить}}
    }
    ```
 
-5. Запустите проект:
+5. Run the project:
 
    ```bash
    go run cmd/main.go
    ```
 
-Сервер будет доступен по адресу [http://localhost:8080](http://localhost:8080).
+The server will be available at [http://localhost:8080](http://localhost:8080).
