@@ -46,8 +46,8 @@ ${\textsf{\color{green}🟩 Примеры запросов}}$
 |-------------------------|-----------------------|----------------------------------------|
 | ${\textsf{\color{lightgreen}Корректный}}$              | `"expression": "2 + 2"` | Вернёт `{"result": "4"}`              |
 | ${\textsf{\color{lightgreen}Корректный}}$              | `"expression": "10 - 5"` | Вернёт `{"result": "5"}`              |
-| ${\textsf{\color{lightorange}Некорректный}}$            | `"expression": "5 / 0"`  | Вернёт `{"error": "division by zero"}` |
-| ${\textsf{\color{lightorange}Некорректный}}$            | `"expression": "invalid"` | Вернёт `{"error": "invalid expression"}` |
+| ${\textsf{\color{orange}Некорректный}}$            | `"expression": "5 / 0"`  | Вернёт `{"error": "division by zero"}` |
+| ${\textsf{\color{orange}Некорректный}}$            | `"expression": "invalid"` | Вернёт `{"error": "invalid expression"}` |
 | ${\textsf{\color{darkred}Неправильный}}$            | `"expression": ""`     | Вернёт `{"error": "Invalid JSON format"}` |
 
 ${\textsf{\color{blue}🟦 Статусы HTTP и возвращаемые значения}}$
