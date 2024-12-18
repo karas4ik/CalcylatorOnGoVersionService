@@ -44,11 +44,11 @@ ${\textsf{\color{green}🟩 Примеры запросов}}$
 
 | Тип запроса              | Пример запроса         | Описание                               |
 |-------------------------|-----------------------|----------------------------------------|
-| Корректный              | `"expression": "2 + 2"` | Вернёт `{"result": "4"}`              |
-| Корректный              | `"expression": "10 - 5"` | Вернёт `{"result": "5"}`              |
-| Некорректный            | `"expression": "5 / 0"`  | Вернёт `{"error": "division by zero"}` |
-| Некорректный            | `"expression": "invalid"` | Вернёт `{"error": "invalid expression"}` |
-| Неправильный            | `"expression": ""`     | Вернёт `{"error": "Invalid JSON format"}` |
+| ${\textsf{\color{lightgreen}Корректный}}$              | `"expression": "2 + 2"` | Вернёт `{"result": "4"}`              |
+| ${\textsf{\color{lightgreen}Корректный}}$              | `"expression": "10 - 5"` | Вернёт `{"result": "5"}`              |
+| ${\textsf{\color{lightred}Некорректный}}$            | `"expression": "5 / 0"`  | Вернёт `{"error": "division by zero"}` |
+| ${\textsf{\color{lightred}Некорректный}}$            | `"expression": "invalid"` | Вернёт `{"error": "invalid expression"}` |
+| ${\textsf{\color{darkred}Неправильный}}$            | `"expression": ""`     | Вернёт `{"error": "Invalid JSON format"}` |
 
 ${\textsf{\color{blue}🟦 Статусы HTTP и возвращаемые значения}}$
 
