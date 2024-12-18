@@ -48,7 +48,7 @@ ${\textsf{\color{red}🟥 Project Description}}$
 
 This project is a simple web service calculator that supports basic operations such as addition, subtraction, multiplication, and division of single and multi-digit numbers. It is designed to process mathematical expressions, providing results in JSON format.
 
-${\textsf{\color{darkyellow}Interesting Points:}}$
+${\textsf{\color{yellow}Interesting Points:}}$
 
 #### 🏃 r.Run()
 
