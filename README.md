@@ -1,12 +1,40 @@
 # Calculator Service
 
-<div style="border-left: 5px solid #ffcccb; padding: 10px; margin: 10px;">
+<style>
+    .red-border {
+        border-left: 5px solid #ffcccb;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .yellow-border {
+        border-left: 5px solid #fffacd;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .green-border {
+        border-left: 5px solid #d0f0c0;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .blue-border {
+        border-left: 5px solid #add8e6;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    .purple-border {
+        border-left: 5px solid #e6e6fa;
+        padding: 10px;
+        margin: 10px 0;
+    }
+</style>
+
+<div class="red-border">
 ## 🟥 Описание проекта
 
 Этот проект представляет собой простой веб-сервис калькулятора, который поддерживает базовые арифметические операции: сложение, вычитание, умножение и деление. Он предназначен для обработки математических выражений, предоставляя результат клиенту в виде JSON.
 </div>
 
-<div style="border-left: 5px solid #fffacd; padding: 10px; margin: 10px;">
+<div class="yellow-border">
 ## 🟨 Как это работает
 
 ```
@@ -44,7 +72,7 @@ HTTP запрос к серверу
 - **Модели (model)**: Определяет структуры данных для запросов и ответов.
 </div>
 
-<div style="border-left: 5px solid #d0f0c0; padding: 10px; margin: 10px;">
+<div class="green-border">
 ## 🟩 Примеры запросов
 
 | Тип запроса              | Пример запроса         | Описание                               |
@@ -56,7 +84,7 @@ HTTP запрос к серверу
 | Неправильный            | `"expression": ""`     | Вернёт `{"error": "Invalid JSON format"}` |
 </div>
 
-<div style="border-left: 5px solid #add8e6; padding: 10px; margin: 10px;">
+<div class="blue-border">
 ## 🟦 Статусы HTTP и возвращаемые значения
 
 | Статус | Описание                                     |
@@ -69,7 +97,7 @@ HTTP запрос к серверу
 | 500    | Внутренняя ошибка сервера                   |
 </div>
 
-<div style="border-left: 5px solid #e6e6fa; padding: 10px; margin: 10px;">
+<div class="purple-border">
 ## 🟣 Заключение: Как установить
 
 1. Клонируйте репозиторий:
@@ -103,4 +131,3 @@ HTTP запрос к серверу
 
 Сервер будет доступен по адресу [http://localhost:8080](http://localhost:8080).
 </div>
-
