@@ -1,6 +1,5 @@
 # Calculator Service
 
-```css
 <style>
     .red-border {
         border-left: 5px solid #ffcccb;
@@ -28,7 +27,6 @@
         margin: 10px 0;
     }
 </style>
-```
 
 <div class="red-border">
 ## 🟥 Описание проекта
