@@ -110,9 +110,12 @@ ${\textsf{\color{purple}🟣 Conclusion: How to Install}}$
 
    ```json
    {
-       "log_level": "debug"
+       "log_level": "debug",
+       "port": 8080
    }
    ```
+
+You can change the `port` value to configure the port on which the server will run.
 
 5. Run the project:
 
